@@ -8,6 +8,7 @@ import android.os.Build;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.view.WindowManager;
 import android.widget.FrameLayout;
 
@@ -40,7 +41,7 @@ public class DyeingBarHelper {
         isNavigationBarAvailable = result[1];
 
         // 如果有,判断是否设置了透明,若没有则设置透明度
-        this.setBarTranslucent();
+//        this.setBarTranslucent();
 
         // 判断是否有Navigation Bar底部导航栏
         isNavigationBarAvailable = mConfig.hasNavigationBar();
@@ -62,16 +63,11 @@ public class DyeingBarHelper {
     /**
      * 设置状态栏透明
      */
-    private void setBarTranslucent() {
-        if (!isNavigationBarAvailable) {
-            ((Activity) mContext).getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
-            isNavigationBarAvailable = true;
-        }
-        if (!isStatusBarAvailable) {
-            ((Activity) mContext).getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-            isStatusBarAvailable = true;
-        }
+    public static void setBarTranslucent(Activity activity) {
+        activity.getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
+        activity.getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
     }
+
 
     /**
      * 设置顶部Status Bar的view
@@ -228,4 +224,5 @@ public class DyeingBarHelper {
     public View getNavigationBarView() {
         return mNavigationBarView;
     }
+
 }

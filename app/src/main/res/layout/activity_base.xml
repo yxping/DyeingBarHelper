@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:text="@string/seekbar"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"/>
+
+        <SeekBar
+            android:id="@+id/seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="255"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:layout_marginLeft="10dp"
+            android:text="@string/color"
+            android:layout_marginBottom="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/green_btn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/circle_green_btn" />
+
+            <Button
+                android:id="@+id/red_btn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/circle_red_btn"
+                android:layout_marginLeft="30dp"/>
+
+            <Button
+                android:id="@+id/blue_btn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/circle_blue_btn"
+                android:layout_marginLeft="30dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

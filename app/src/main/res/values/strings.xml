@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">DyeingBarHelper</string>
+    <string name="view1">看状态栏</string>
+    <string name="view2">颜色在变化</string>
+    <string name="view3">很好玩啊</string>
+    <string name="seekbar">透明度:</string>
+    <string name="color">颜色:</string>
 </resources>
