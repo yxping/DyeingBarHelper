@@ -16,7 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ViewPagerActivity"></activity>
+        <activity android:name=".ViewPagerActivity"
+            ></activity>
         <activity android:name=".BaseFunctionActivity"></activity>
         <activity android:name=".SystemApiActivity"></activity>
         <activity android:name=".ImmersiveActivity"></activity>

@@ -27,7 +27,21 @@ public class DyeingBarHelper {
     private SystemBarConfig mConfig;
 
     public DyeingBarHelper(Context context) {
-        mContext = context;
+        this.mContext = context;
+        init();
+    }
+
+    /**
+     * 此方法提供给自定义status bar和navigation bar的样式
+     *
+     * @param context
+     * @param statusBarView
+     * @param navBarView
+     */
+    public DyeingBarHelper(Context context, View statusBarView, View navBarView) {
+        this.mStatusBarView = statusBarView;
+        this.mNavigationBarView = navBarView;
+        this.mContext = context;
         init();
     }
 
@@ -75,7 +89,9 @@ public class DyeingBarHelper {
      * @param decorViewGroup
      */
     private void setStatusBarView(ViewGroup decorViewGroup) {
-        mStatusBarView = new View(mContext);
+        if (mStatusBarView == null) {
+            mStatusBarView = new View(mContext);
+        }
         FrameLayout.LayoutParams params;
         params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT,
                 mConfig.getStatusBarHeight());
@@ -95,7 +111,9 @@ public class DyeingBarHelper {
      * @param decorViewGroup
      */
     private void setNavigationBarView(ViewGroup decorViewGroup) {
-        mNavigationBarView = new View(mContext);
+        if (mNavigationBarView == null) {
+            mNavigationBarView = new View(mContext);
+        }
         FrameLayout.LayoutParams params;
         if (mConfig.isNavigationBarAtBottom()) {
             params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, mConfig.getNavigationBarHeight());
@@ -177,6 +195,7 @@ public class DyeingBarHelper {
 
     /**
      * 设置status bar的透明度
+     *
      * @param alpha
      */
     public void setStatusBarViewAlpha(float alpha) {
@@ -187,6 +206,7 @@ public class DyeingBarHelper {
 
     /**
      * 设置Navigation bar的透明度
+     *
      * @param alpha
      */
     public void setNavigationBarViewAlpha(float alpha) {
@@ -211,6 +231,7 @@ public class DyeingBarHelper {
 
     /**
      * 获取status bar填充的view
+     *
      * @return
      */
     public View getStatusBarView() {
@@ -219,6 +240,7 @@ public class DyeingBarHelper {
 
     /**
      * 获取navigation bar填充的view
+     *
      * @return
      */
     public View getNavigationBarView() {
