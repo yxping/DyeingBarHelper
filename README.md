@@ -1,6 +1,9 @@
 # DyeingBarHelper
 a android project for tinting the system bar
 
+### Demo
+![](https://github.com/yxping/DyeingBarHelper/raw/master/demo.gif)
+
 ## Dependency
 1.Add it in your root build.gradle at the end of repositories:
 ``` gradle
