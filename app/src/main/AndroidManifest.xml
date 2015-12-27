@@ -9,8 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
-            android:theme="@style/ActionBarTheme">
+            android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,6 +18,7 @@
         </activity>
         <activity android:name=".ViewPagerActivity"></activity>
         <activity android:name=".BaseFunctionActivity"></activity>
+        <activity android:name=".SystemApiActivity"></activity>
     </application>
 
 </manifest>

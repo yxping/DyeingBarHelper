@@ -30,7 +30,6 @@ public class ViewPagerActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_viewpager);
-
         // 设置状态栏和导航栏为透明,否则无法达到效果
         DyeingBarHelper.setBarTranslucent(this);
 

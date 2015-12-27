@@ -19,14 +19,24 @@
             android:id="@+id/btn_base"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="BaseFunction" />
+            android:text="BaseFunction"
+            android:textAllCaps="false" />
 
         <Button
             android:id="@+id/btn_slide"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="SlideView" />
+            android:text="SlideView"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/btn_system"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="System Api"
+            android:textAllCaps="false"/>
 
     </LinearLayout>
 
