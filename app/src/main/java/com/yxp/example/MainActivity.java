@@ -3,7 +3,6 @@ package com.yxp.example;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -13,6 +12,7 @@ public class MainActivity extends Activity {
     private Button mSlideBtn;
     private Button mBaseBtn;
     private Button mSystemBtn;
+    private Button mImmersionBtn;
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     @Override
@@ -41,6 +41,14 @@ public class MainActivity extends Activity {
                 startActivity(new Intent(MainActivity.this, SystemApiActivity.class));
             }
         });
+        mImmersionBtn = (Button) findViewById(R.id.btn_immersion);
+        mImmersionBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, ImmersiveActivity.class));
+            }
+        });
+
     }
 
 }
